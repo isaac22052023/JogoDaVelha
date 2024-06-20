@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff0000">
+    <link rel="icon" href="/icon/icon-hashtag.svg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Jogo da Velha #</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="playerText"># Jogo da Velha #</h1>
+        <a href="/index.html" class="mode-btn-1x1">1x1</a>
+        <button id="restartBtn">Restart</button>
+
+        <div id="gameboard">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+        </div>
+
+        <div id="scoreboard">
+            <p>X - <span id="x-points">0</span></p>
+            <p>VS</p>
+            <p>O - <span id="o-points">0</span></p>
+        </div>
+
+        <div id="difficulty-selector">
+            <p>Nível:ㅤ</p>
+            <select id="difficulty-select">
+                <option value="1">Fácil</option>
+                <option value="2">Médio</option>
+                <option value="3">Difícil</option>
+            </select>
+        </div>
+    </div>
+
+    <script type="module" src="/1_jogador.js"></script>
+</body>
+</html>

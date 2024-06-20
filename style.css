@@ -1,0 +1,170 @@
+/*fontes usadas*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+/*cores usadas*/
+:root {
+    --color-red: #ff0000;
+    --color-blue: #1100ff;
+    --color-yellow: #fbff00;
+    --color-white: #fff;
+    --color-black: #000000;
+    --color-gray: #414047;
+}
+
+/*estilização*/
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-red);
+    font-family: "Caveat", cursive;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-gray);
+}
+
+#gameboard {
+   display: grid;
+   width: min(95%, 300px); 
+   max-width: 100%;
+   margin-top: 40px;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    width: min(95%, 200px);
+    max-width: 100%;
+    margin-top: 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+#scoreboard :nth-child(2) {
+    margin-top: -5px;
+    font-size: 1.6rem;
+    font-family: "Black Ops One", system-ui;
+    color: var(--color-red);
+}
+
+#difficult-board {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#difficult-board select {
+    padding: 5px 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    font-size: 120px;
+    color: var(--color-white);
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: box-shadow 0.1s ease;
+    color: var(--color-white);
+    text-shadow: 3px 3px 4px var(--color-black);
+    border-color: var(--color-yellow);
+    background-color: var(--color-yellow);
+}
+
+#restartBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(226, 245, 60, 0.726);
+}
+
+.mode-btn-computador {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: box-shadow 0.1s ease;
+    color: var(--color-white);
+    border-color: var(--color-blue);
+    background-color: var(--color-blue);
+}
+
+.mode-btn-computador:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(2, 102, 252, 0.75);
+}
+
+.mode-btn-1x1 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: box-shadow 0.1s ease;
+    color: var(--color-white);
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+}
+
+.mode-btn-1x1:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(252, 2, 2, 0.75);
+}
+
+#difficulty-selector {
+    display: flex;
+    padding: 30px 0 0 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#difficulty-select {
+    background-color: var(--color-white);
+    color: #333;
+    border: 1px solid var(--color-gray);
+    padding: 10px;
+    border-radius: 777px;
+}
