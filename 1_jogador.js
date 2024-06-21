@@ -99,7 +99,7 @@ function restart() {
     box.style.backgroundColor = "";
   });
 
-  playerText.innerText = "Tic Tac Toe";
+  playerText.innerText = "# Jogo da Velha #";
 
   currentPlayer = currentPlayer === X_TEXT ? O_TEXT : X_TEXT;
   if (currentPlayer === O_TEXT) {
